@@ -9,7 +9,7 @@ Any of the below
 ```javascript
 
 // Return an object hash.
-requireDirectory = require('require-directory');
+requireDirectory = require('reqdir');
 
 // Load all files in a directory.
 myFiles = null;
@@ -31,11 +31,11 @@ requireDirectory.load(myFiles, './myPath', function() {
 
 ## Installation
 
-`npm install require-directory`
+`npm install reqdir`
 
 ## Usage
 
-require('directory').load(object, directory, [callback]])
+require('reqdir').load(object, directory, [callback]])
 
 ## License
 
