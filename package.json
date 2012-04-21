@@ -2,7 +2,7 @@
   "author": "Christopher Gross <christopher.gross@zoundfx.com> (https://github.com/noXtreme21)",
   "name": "reqdir",
   "description": "require everything in a directory and bind them to a object",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "git://github.com/noxtreme/node-reqdir.git"

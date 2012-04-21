@@ -13,18 +13,24 @@ requireDirectory = require('reqdir');
 
 // Load all files in a directory.
 myFiles = null;
-requireDirectory.load(myFiles, './myPath');
+requireDirectory.loadAll(myFiles, './myPath');
 
 // Load all files in a directory and react of return value.
 myFiles = null;
-if (requireDirectory.load(myFiles, './myPath') === true) {
+if (requireDirectory.loadAll(myFiles, './myPath') === true) {
     console.log('all files loaded without error');
 }
 
 // Load all files in a directory and call callback on finish.
 myFiles = null;
-requireDirectory.load(myFiles, './myPath', function() {
+requireDirectory.loadAll(myFiles, './myPath', function() {
     console.log('all files are loaded');
+});
+
+// Load all files in a directory and call callback for each loaded file.
+requireDirectory.loadSeperate('./myPath', function(loadedFile, fileName, readableName) {
+    console.log('file "' + fileName + '" loaded');
+    loadedFile.doSomething(); // Call a method of loaded module.
 });
 
 ````
